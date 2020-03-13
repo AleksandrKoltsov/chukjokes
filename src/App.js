@@ -23,6 +23,7 @@ class App extends React.Component{
     fetch(link).then(data => data.json()).then(d => {
       const jokes = this.state.jokes.slice();
       jokes.unshift(d.value);
+      console.log(jokes);
       this.setState({ jokes });
     });
   }
