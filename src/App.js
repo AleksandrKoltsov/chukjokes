@@ -19,7 +19,7 @@ class App extends React.Component{
   }
 
   getJoke(){
-    const link = 'https://api.icndb.com/jokes/random';
+    const link = 'https://api.icndb.com/jokes/random/';
     fetch(link).then(data => data.json()).then(d => {
       const jokes = this.state.jokes.slice();
       jokes.unshift(d.value);
